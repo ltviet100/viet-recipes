@@ -1,1 +1,10 @@
-<h1>Welcome to <%= @chef.chefname %>'s Profile</h1>
+<h1>Chef <%= @chef.chefname %>'s Profile</h1>
+
+<%= gravatar_for @chef, size: 150 %>
+
+<h4><%= @chef.chefname %>'s recipes</h4>
+
+<% @chef.recipes.each do |recipe| %>
+  <p><%= link_to recipe.name, recipe_path(recipe) %></p>
+  <p><%= truncate(recipe.description, length: 150) %></p>
+<% end %>

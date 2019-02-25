@@ -2,6 +2,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* ==================== Style for Global ===================== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 55px; /* height of footer */
+}
+
 /* ==================== Override Styles ===================== */
 .navbar {
   margin-bottom: 0 !important;
@@ -20,6 +31,11 @@
 
 .dropdown-menu li a {
   color: #34495e !important;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2ecc71 !important;
+  color: #fff !important;
 }
 
 .btn-xlarge, .footer {
@@ -57,6 +73,12 @@
   padding-top: 15px;
 }
 
+.footer {
+  min-height: 55px;
+  width: 100%;
+}
+
+/* ================== Style for Back to Page ================ */
 .back-link a:link,
 .back-link a:visited {
   color: #2ecc71;
@@ -69,4 +91,23 @@
   font-weight: 500;
 }
 
+/* ================== Style for Homepage =================== */
+
+.discover {
+  text-align: center;
+  background-color: #212121;
+  height: 200px;
+  width: 100%;
+}
+
+.discover h2 {
+  color: #2ecc71;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.discover h4 {
+  color: #fff;
+  font-weight: 300;
+}
 

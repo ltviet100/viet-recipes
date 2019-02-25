@@ -1,0 +1,19 @@
+<div class="list-recipes">
+  <div class="container">
+    <% @recipes.each do |recipe| %>
+      <div class="row">
+        <div class="col-md-3">
+          <%= link_to recipe.name, recipe_path(recipe) %>
+          <p>
+            <%= truncate(recipe.description, length: 150) %>
+          </p>
+          <p>
+            <span class="quite">
+              <small>Create: <%= time_ago_in_words(recipe.created_at) %> ago</small>
+            </span>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

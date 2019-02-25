@@ -8,7 +8,7 @@
   border-radius: 0;
 }
 
-.navbar-default, .footer {
+.navbar-default {
   background-color: #2ecc71 !important;
   border-color: transparent ;
 }
@@ -20,6 +20,10 @@
 
 .dropdown-menu li a {
   color: #34495e !important;
+}
+
+.btn-xlarge, .footer {
+  background-color: #2ecc71 !important;
 }
 
 /* ================== Style for Navigation ================== */
@@ -38,6 +42,7 @@
 .description p {
   color: #95a5a6;
   text-align: justify;
+  font-size: 15px;
 }
 
 .description strong {
@@ -50,6 +55,18 @@
   color: #fff;
   text-align: center;
   padding-top: 15px;
+}
+
+.back-link a:link,
+.back-link a:visited {
+  color: #2ecc71;
+}
+
+.back-link a:hover,
+.back-link a:active {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 

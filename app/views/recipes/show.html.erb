@@ -2,3 +2,5 @@
 <p><%= simple_format(@recipe.description) %></p>
 <p><%= @recipe.chefname %></p>
 <%= link_to gravatar_for(@recipe.chef), recipes_path %>
+<%= link_to "Edit", edit_recipe_path(@recipe) %>
+<%= link_to "Remove", recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" } %>

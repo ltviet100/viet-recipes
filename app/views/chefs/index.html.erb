@@ -13,8 +13,16 @@
             Total Recipes
           </li>
         </ul>
+
+        <ul class="list-group">
+          <% if logged_in? && current_chef == chef %>
+            <li class="list-group-item list-item">
+              <%= image_tag("edit.png") %><%= link_to 'Edit', edit_chef_path(chef) %>
+              <%= image_tag("delete.png") %><%= link_to 'Remove', chef_path(chef), method: :delete, data: { confirm: "Are you sure?" } %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   <% end %>
 </div>
-

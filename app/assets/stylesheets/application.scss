@@ -1,21 +1,28 @@
 /* ==================== Import Bootstrap ===================== */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 /* ==================== Style for Global ===================== */
-html, body {
+html {
   height: 100%;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: 55px; /* height of footer */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 55px;    /* Footer height */
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 /* ==================== Override Styles ===================== */
 .navbar {
-  margin-bottom: 0 !important;
+  margin-bottom: 40px !important;
   border-radius: 0;
 }
 
@@ -38,7 +45,7 @@ html, body {
   color: #fff !important;
 }
 
-.btn-xlarge, .footer {
+.btn-xlarge {
   background-color: #2ecc71 !important;
 }
 
@@ -67,17 +74,19 @@ html, body {
 }
 
 /* =================== Style for Footer =================== */
-.footer p {
-  color: #fff;
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;           /* Footer height */
+  background-color: #2ecc71;
+}
+
+#footer p {
   text-align: center;
+  color: #fff;
   padding-top: 15px;
 }
-
-.footer {
-  min-height: 55px;
-  width: 100%;
-}
-
 /* ================== Style for Back to Page ================ */
 .back-link a:link,
 .back-link a:visited {
@@ -92,12 +101,11 @@ html, body {
 }
 
 /* ================== Style for Homepage =================== */
-
 .discover {
   text-align: center;
   background-color: #212121;
   height: 200px;
-  width: 100%;
+  margin-bottom: 30px;
 }
 
 .discover h2 {
@@ -110,4 +118,148 @@ html, body {
   color: #fff;
   font-weight: 300;
 }
+
+
+/* ================= Style for Listing Chef ================= */
+.active {
+  background-color: #fff !important;
+  border: 1px solid #DDDDDD !important;
+}
+
+.active a {
+  color: #0974BC;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.active a:hover {
+  text-decoration: none;
+}
+
+/* ================= Style for Listing Recipes ================= */
+.listing {
+  margin-bottom: 30px;
+}
+
+.wrap-recipe {
+  border: 1px solid #ccc;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  width: 97.5%;
+}
+
+.listing h4 a {
+  color: #2ecc71;
+}
+
+.listing h4 a:hover {
+  text-decoration: none;
+}
+.parent, .second-parent {
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.parent {
+  height: 300px;
+
+}
+
+.short-detail {
+  width: 50%;
+  margin-right: 10px;
+  padding-top: 25px;
+}
+
+.image-recipe {
+  width: 50%;
+}
+
+.image-recipe img {
+  height: 300px;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.image-recipe img:hover {
+  opacity: .5;
+}
+
+
+.second-parent {
+  height: 55px;
+  margin-top: 30px;
+}
+
+.save {
+  width: 50%;
+  background-color: #2ecc71;
+  transition: .3s;
+}
+
+.save:hover {
+  background-color: #27ae60;
+}
+
+.rate {
+  width: 50%;
+  background-color: #BDBDBD;
+  transition: .3s;
+}
+
+.rate:hover {
+  background-color: #9E9E9E;
+}
+
+.third-parent {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.more-actions {
+  margin-bottom: 30px;
+}
+
+.more-actions a {
+  padding-left: 5px;
+  padding-right: 30px;
+  color: #0974BC;
+  font-weight: bold;
+}
+
+.more-actions a:hover {
+  text-decoration: none;
+}
+
+.save span a, .rate span a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.save span a:hover, .rate span a:hover {
+  text-decoration: none;
+}
+
+.save span {
+  position: absolute;
+  left: 34%;
+  padding-top: 15px;
+}
+
+.save img {
+  position: absolute;
+  left: 30%;
+}
+
+.rate {
+  padding-top: 10px;
+  padding-left: 20%;
+}
+
 

@@ -10,10 +10,13 @@
   </head>
 
   <body>
-    <div class="wrapper">
-     <%= render 'shared/navbar' %>
-     <%= yield %>
+    <div id="page-container">
+      <%= render 'shared/navbar' %>
+      <div id="content-wrap">
+        <%= yield %>
+      </div>
+      <%= render 'shared/footer' %>
     </div>
-    <%= render 'shared/footer' %>
+
   </body>
 </html>

@@ -1,7 +1,40 @@
-<p><%= @recipe.name %></p>
-<p><%= simple_format(@recipe.description) %></p>
-<p><%= @recipe.chefname %></p>
-<%= link_to gravatar_for(@recipe.chef), recipes_path %>
-<%= link_to "Edit", edit_recipe_path(@recipe) %>
-<%= link_to "Remove", recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" } %>
-<%= link_to "Return All Recipes", recipes_path %>
+<div class="parent">
+  <div class="short-detail">
+    <h4><%= @recipe.name %></h4>
+    <p>Rating</p>
+    <p>200 reviews</p>
+    <%= gravatar_for(@recipe.chef, size: 80) %><span class="quite"><small> Recipe by: </small><%= @recipe.chefname %></span><br><br>
+
+  </div>
+
+  <div class="image-recipe">
+    <%= image_tag("01.jpg") %>
+  </div>
+</div>
+
+<div class="second-parent">
+  <div class="save">
+    <%= image_tag("heart-icons.png") %> <span><%= link_to 'Save', root_path %></span>
+  </div>
+
+  <div class="rate">
+    <%= image_tag("rating.svg") %> <span><%= link_to 'Rate It', root_path %></span>
+  </div>
+</div>
+
+<div class="third-parent">
+  <h4>Ingredients</h4>
+  <hr>
+  <h4>Directions</h4>
+  <hr>
+  <p><%= simple_format(@recipe.description) %></p>
+  <h4>More Actions</h4>
+  <hr>
+  <div class="more-actions">
+    <% if logged_in? && current_chef == @recipe.chef %>
+      <%= image_tag("edit.png") %><%= link_to 'Edit', edit_recipe_path(@recipe) %>
+      <%= image_tag("delete.png") %><%= link_to 'Remove', recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+    <%= image_tag("all.png") %><%= link_to 'Return All Recipes', recipes_path %>
+  </div>
+</div>

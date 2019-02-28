@@ -1,0 +1,16 @@
+<% obj.each_slice(4) do |recipes_group| %>
+    <div class="row">
+      <% recipes_group.each do |recipe| %>
+        <div class="col-md-3 col-sm-3 listing">
+          <%= image_tag("01.jpg", class:'media-object') %>
+          <div class="wrap-recipe">
+            <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+            <p>Rating</p>
+            <p><%= recipe.description %></p>
+            <%= gravatar_for(recipe.chef, size: 30) %>
+            <span class="quite"><small>By </small><%= recipe.chefname %> | <%= time_ago_in_words(recipe.created_at) %> ago </span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
